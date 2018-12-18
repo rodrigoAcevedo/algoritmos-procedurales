@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Algoritmos Procedurales en Videojuegos</title>
+	<link rel="stylesheet" type="text/css" href="css/reveal.css">
+	<link rel="stylesheet" type="text/css" href="css/moon.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<!-- 01: Pantalla principal -->
+			<section id="al-main" data-background-iframe="render-main.html">
+				<div id="al-main-render"></div>
+				<img src="assets/img/main.svg">
+			</section>
+
+			<!-- 02: Introducción -->
+			<section id="al-intro" data-background-color="#432A5E">
+				<h1>Algoritmos procedurales en videojuegos</h1>
+				<ul>
+					<li class="fragment fade-in">Explicar el lugar de los algoritmos procedurales en el diseño, desarrollo y la jugabilidad en los videojuegos.</li>
+					<li class="fragment fade-in">Definir una clasificación de videojuegos en relación a los niveles de profundidad que tiene su contenido procedural.</li>
+					<li class="fragment fade-in">Desarrollar un videojuego procedural que sirva de ejemplo a lo expuesto en el marco teórico de esta investigación.</li>
+				</ul>
+			</section>
+
+			<!-- 03: Que son los algoritmos procedurales? -->
+			<section id="al-description" data-background-color="#000000">
+				<h1 style="margin-top:1.5em">Definiendo a los algoritmos procedurales</h1>
+				<section>
+					<div class="grid" style="height:500px">
+						<div>
+							<img src="assets/img/02-procedural-gen.gif" class="img-responsive">
+						</div>
+						<div>
+							<p class="fragment fade-up" style="margin-top:5em">Se entiende por generación por procedimientos o procedural a la creación de datos con algoritmos en lugar de forma manual.</p>
+							<p class="fragment">Un algoritmo que crea contenido arbitrario pero en base a directrices.</p>
+							<p class="fragment fade-up">Un algoritmo recursivo, que se llama así mismo. Se expresa la solución de un problema haciendo una llamada recursiva.</p>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="grid" style="height:500px;margin-top:2em">
+						<div>
+							<img src="assets/img/03-nodos.svg" class="img-responsive">
+						</div>
+						<div>
+							<p class="fragment">Se crea un <strong>árbol de dependencias</strong>.</p>
+							<p class="fragment">Nodos que se conectan entre sí.</p>
+							<p class="fragment">Cuando un nodo no tiene uno superior que lo preceda, a este nodo lo llamamos <strong>nodo raíz</strong>.</p>
+							<p class="fragment">Al ejecutar nuestra orden ocurre la primera iteración, tenemos ramas, de cada una de estas ramas surgirán más ramas, y así sucesivamente.</p>
+						</div>
+					</div>
+				</section>
+				<!-- TODO: Agregar imagen de bug y de solución en los dos últimos items -->
+				<section>
+					<ul>
+						<li class="fragment fade-in">Debemos definir los límites mediante diseño.</li>
+						<li class="fragment fade-in">Más complejos son estos algoritmos, menos control tenemos sobre la creación de contenido.</li>
+						<li class="fragment fade-in"><span class="fragment highlight-red">Más peligro de generar bugs.</span></li>
+						<li class="fragment fade-in"><span class="fragment highlight-green">Es en este lugar donde las directrices encuentran su materialización en los <strong>algoritmos de ramificación y poda</strong>.</span></li>
+					</ul>
+				</section>
+			</section>
+
+			<!-- 04: Contenido procedural -->
+			<!-- TODO: Agregar imágenes respectivas a cada item -->
+			<section id="al-procedural-content" data-background-color="#000000">
+				<h1>Contenido procedural</h1>
+				<div class="grid-four">
+					<div class="fragment fade-up">Escenarios</div>
+					<div class="fragment fade-up">Personajes</div>
+					<div class="fragment fade-up">Items</div>
+					<div class="fragment fade-up">Eventos</div>
+				</div>
+			</section>
+
+			<!-- 05: Breve historia de videojuegos procedurales -->
+			<section id="al-history" data-background-color="#9ACEEE">
+				<h1 style="margin-top:1.5em">Historia de los videojuegos procedurales</h1>
+				<section>
+					<div class="grid" style="height:500px;margin-top:3em">
+						<div class="fragment fade-right">
+							<img src="assets/img/05-game-of-life.gif">
+						</div>
+						<div class="fragment fade-left">
+							<h2>Conway's Game of Life</h2>
+							<p>El primer videojuego procedural conocido, desarrollado en 1970.</p>
+							<p class="fragment fade-left">Funcionaba con el siguiente set de reglas:</p>
+							<ol>
+								<li class="fragment fade-left">Cualquier célula viva con menos de dos vecinos vivos, moría. Por causas de subpoblación.</li>
+								<li class="fragment fade-left">Cualquier célula viva con más de tres vecinos moría, por superpoblación.</li>
+								<li class="fragment fade-left">Cualquier célula con dos o tres vecinos vivos sobrevivía, pasando a la siguiente generación.</li>
+								<li class="fragment fade-left">Cualquier casillero con exactamente tres células vivas sería poblada con otra célula viva.</li>
+							</ol>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="grid-layout-left" style="height:500px;margin-top:3em">
+						<div class="fragment fade-right">
+							<img src="assets/img/05-rogue.png">
+						</div>
+						<div class="fragment fade-left">
+							<h2>Rogue (1980)</h2>
+							<p class="fragment fade-left">El título de mayor influencia en todos los juegos procedurales</p>
+							<p class="fragment fade-left">Los escenarios los recursos que podía obtener el usuario eran ilimitados.</p>
+							<p class="fragment fade-left">De manera incremental se sube también la dificultad y la agresividad de los enemigos.</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="grid-layout-left" style="height:500px;margin-top:3em">
+						<div class="fragment fade-right">
+							<img src="assets/img/05-diablo.png">
+						</div>
+						<div class="fragment fade-left">
+							<h2>Diablo (1996)</h2>
+							<p>Generaba calabozos y algunos elementos sobre la marcha, en lugar de ser ítems prefijados con anterioridad.</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="grid-layout-left" style="height:500px;margin-top:3em">
+						<div class="fragment fade-right">
+							<img src="assets/img/05-dwarf-fortress.png">
+						</div>
+						<div class="fragment fade-left">
+							<h2>Dwarf Fortress (2006)</h2>
+							<p>Este brinda un mundo único: altura, condiciones climáticas, temperatura, ambiental y pueblos.</p>
+							<p class="fragment fade-left">Cada mundo construido es único.</p>
+							<p class="fragment fade-left">Los eventos que tienen lugar durante el juego afectarán a los siguientes juegos en el mismo mundo.</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="grid-layout-left" style="height:500px;margin-top:3em">
+						<div class="fragment fade-right">
+							<img src="assets/img/05-no-man-sky.png">
+						</div>
+						<div class="fragment fade-left">
+							<h2>No man's sky (2016)</h2>
+							<p></p>
+							<p class="fragment fade-left">Un universo totalmente procedural</p>
+							<p class="fragment fade-left">Con sus 18 trillones de planetas pone en la cima a los algoritmos procedurales y su enorme potencial de creación.</p>
+						</div>
+					</div>
+				</section>
+			</section>
+
+			<!-- 06: Clasificación de videojuegos procedurales -->
+			<section id="al-categories" data-background-iframe="render-categories.html">
+				<h1 style="margin-top:1.5em">Clasificación videojuegos procedurales</h1>
+				<section>
+					<ul>
+						<li class="fragment fade-up">Se identifican los distintos tipos de videojuegos procedurales.</li>
+						<li class="fragment fade-up">Se establece una clasificación acorde al nivel de profundidad que alcanza su contenido.</li>
+					</ul>
+				</section>
+				<section>
+					<img src="assets/img/06-ejes.svg" class="img-responsive">
+				</section>
+				<section>
+					<ul>
+						<li class="fragment fade-up">Nivel 1: Básicos</li>
+						<li class="fragment fade-up">Nivel 2: Intermedios</li>
+						<li class="fragment fade-up">Nivel 3: Avanzados</li>
+						<li class="fragment fade-up">Nivel 4: Absolutos</li>
+					</ul>
+				</section>
+
+				<section>
+					<div class="grid-layout-left" style="height:500px;margin-top:3em">
+						<div class="fragment fade-right to-right">
+							<img class="img-responsive" src="assets/img/06-tetris.jpg">
+						</div>
+						<div class="fragment fade-left to-left">
+							<h2>Nivel 1</h2>
+							<h3>Tetris (1984)</h3>
+							<p class="fragment fade-left">Se compone de cuatro piezas o tetrominós.</p>
+							<p class="fragment fade-left">Van apareciendo de manera aleatoria y el jugador debe ubicarlos de manera de generar líneas horizontales.</p>
+							<p class="fragment fade-left">Tiene sólo un elemento que aparece de manera aleatoria.</p>
+							<p class="fragment fade-left">La dificultad incrementa con la aceleración de la caída de fichas.</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="grid" style="height:500px;margin-top:3em">
+						<div class="fragment fade-right to-right">
+							<img src="assets/img/06-roguelike.jpg">
+						</div>
+						<div class="fragment fade-left to-left">
+							<h2>Roguelikes</h2>
+							<p class="fragment fade-left">Más nivel de profundidad para la creación de elementos. Al menos dos niveles.</p>
+							<p class="fragment fade-left">Por lo general, sus escenarios se crean de manera procedural.</p>
+							<p class="fragment fade-left"><span class="fragment highlight-red">Deben venir acompañados con un incremento de la dificultad.</span></p>
+							<p class="fragment fade-left"><span class="fragment highlight-blue">Prestar atención a la curva de dificultad del juego.</span></p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div style="height:500px;margin-top:3em">
+						<h2>Nivel 3</h2>
+						<ul>
+							<li class="fragment fade-up">El nivel de complejidad es superior.</li>
+							<li class="fragment fade-up">Los videojuegos mas característicos son los simuladores de entornos virtuales.</li>
+							<li class="fragment fade-up">Tales como el <strong>Sim City</strong>, <strong>GTA</strong>, <strong>Left 4 Dead</strong> y <strong>Dying Light</strong> entre otros.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<div class="grid-layout-left" style="height:500px;margin-top:3em">
+						<div class="fragment fade-right to-right">
+							<img src="assets/img/06-gta-v.jpg" class="img-responsive">
+						</div>
+						<div class="fragment fade-left to-left">
+							<h2>GTA V (2013)</h2>
+							<p class="fragment fade-left">Las personas, los vehículos y los eventos de este mundo se generan proceduralmente.</p>
+							<p class="fragment fade-left">Variantes en el género, altura, peso, contextura física, color de cabello, ojos y piel, y ropa.</p>
+							<p class="fragment fade-left"><span class="fragment highlight-blue">Directrices de creación bien diseñadas, sin producir errores lógicos u obstáculos en la creación de contenido.</span></p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="grid-layout-left" style="height:500px;margin-top:3em">
+						<div class="fragment fade-right to-right">
+							<img src="assets/img/06-dying-light-2.jpg" class="img-responsive">
+						</div>
+						<div class="fragment fade-left to-left">
+							<h2>Dying Light (2015)</h2>
+							<p class="fragment fade-left"><em>"Nada es permanente, excepto el cambio"</em> - Heráclito</p>
+							<p class="fragment fade-left">Un mundo infectado por zombis, con civiles en busca de ayuda y héroes anónimos.</p>
+							<p class="fragment fade-left"><span class="fragment highlight-blue">La próxima entrega promete un entorno que cambiará según las decisiones que el usuario tome.</span></p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div style="height:500px;margin-top:3em">
+						<h2>Nivel 4</h2>
+						<ul>
+							<li class="fragment fade-up">Videojuegos cuyo contenido es completamente procedural.</li>
+							<li class="fragment fade-up">Aprovechan la potencia de los procesadores actuales y de la computación en la nube.</li>
+							<li class="fragment fade-up"><span class="fragment highlight-blue">Expanden sus horizontes hacia mucho mas alla de lo que un jugador pueda recorrer en una vida.</span></li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<div class="grid-layout-left" style="height:500px;margin-top:3em">
+						<div class="fragment fade-right to-right">
+							<img src="assets/img/06-minecraft.jpg" class="img-responsive">
+						</div>
+						<div class="fragment fade-left to-left">
+							<h2>Minecraft (2009)</h2>
+							<p class="fragment fade-left">Posee un territorio estable equivalente a <strong class="fragment highlight-red">4.080.576.000km2</strong>.</p>
+							<p class="fragment fade-left">Aunque las matemáticas estiman un total de <strong class="fragment highlight-red">4.722.366.482.896.645km2</strong>, el límite teórico de la arquitectura de 32 bits.</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="grid-layout-left" style="height:500px;margin-top:3em">
+						<div class="fragment fade-right to-right">
+							<img src="assets/img/06-no-mans-sky.jpg" class="img-responsive">
+						</div>
+						<div class="fragment fade-left to-left">
+							<h2>No Man's Sky (2016)</h2>
+							<p class="fragment fade-left">Todo su contenido es procedural, incluso la música.</p>
+						</div>
+					</div>
+				</section>
+
+			</section>
+
+			<!-- 07: Psicología aplicada a videojuegos procedurales -->
+			<section id="al-psychology" data-background-color="#FFFFFF">
+				<h1 style="margin-top:1.5em">Psicología aplicada a videojuegos procedurales</h1>
+				<section>
+					<img src="assets/img/07-psychology.svg" class="img-responsive">
+				</section>
+
+				<section>
+					<p class="fragment fade-in">Nos servimos de la psicología y sociología como base teórica para tener un <em>Game Design</em> sólido</p>
+					<p class="fragment fade-in">Taxonomía de Bartle</p>
+					<p class="fragment fade-in">Teoría de Flow</p>
+				</section>
+
+				<section style="position:relative">
+					<h2 style="position:absolute;top:0;left:0">Taxonomía de Bartle</h2>
+					<div class="fragment fade-in">
+						<img src="assets/img/07-bartle.svg" style="width:70%">
+					</div>
+				</section>
+
+				<section style="text-align:left" class="al-bartle">
+					<h2 style="margin-bottom:2em">Taxonomía de Bartle</h2>
+					<div class="grid">
+						<div class="fragment fade-right" style="margin-bottom: 1em">
+							<h3>Socializador</h3>
+							<p>El disfrute de un juego para ellos consiste en la interacción con otros jugadores.</p>
+						</div>
+						<div class="fragment fade-left">
+							<h3>Competidor</h3>
+							<p>Prefieren la competencia directa con otros jugadores y personajes no jugables.</p>
+						</div>
+					</div>
+					<div class="grid">
+						<div class="fragment fade-right">
+							<h3>Explorador</h3>
+							<p>Prefieren descubrir áreas, crear niveles y descubrir secretos.</p>
+						</div>
+						<div class="fragment fade-left">
+							<h3>Archivador</h3>
+							<p>Prefieren ganar puntos, niveles, equipos y logros en un juego.</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2 style="margin-bottom:2em">Teoría de Flow</h2>
+					<p class="fragment fade-in">Se refiere al estado mental operativo en la cual una persona está completamente inmersa en la actividad que realiza.</p>
+					<p class="fragment fade-in">Mihaly Csikszentmihayi (1975)</p>
+				</section>
+
+				<section>
+					<h2 style="margin-bottom:2em">Teoría de Flow</h2>
+					<ul>
+						<li class="fragment fade-in">Distorsiones en la experiencia temporal.</li>
+						<li class="fragment fade-in">Euforia.</li>
+						<li class="fragment fade-in">Sentido de control sobre la actividad que se realiza.</li>
+						<li class="fragment fade-in">Una sensación de completitud o unidad integral de la persona.</li>
+						<li class="fragment fade-in">El foco de conciencia se reduce a la actividad misma, acción y conciencia se fusionan.</li>
+					</ul>
+				</section>
+				<!-- TODO: Fijate si podes hacer un slide o que transicionen con efecto las imágenes -->
+				<section>
+					<h2 style="margin-top:1em">Teoría de Flow</h2>
+					<img src="assets/img/07-flow-1.svg" class="fragment fade-in" width="400px">
+				</section>
+
+				<section>
+					<h2 style="margin-top:1em">Teoría de Flow</h2>
+					<img src="assets/img/07-flow-2.svg" class="fragment fade-in" width="400px">
+				</section>
+
+			</section>
+
+			<!-- 08: Propuesta -->
+			<section data-background-image="assets/img/07-titlepic.png">
+			</section>
+			<section id="al-proposal" data-background-color="#000000">
+				<h1 style="margin-top:1.5em;">Eternity</h1>
+				<section>
+					<em>"Eres Luke, un caballero que tras fallecer en batalla cae en una dimensión extraña conocida como el “Limbo”. El Limbo no es ni el cielo ni el infierno, es el lugar al que fue asignado para expiar sus pecados en vida. Lo que debe hacer Luke es abrirse paso a través del Limbo para llegar al cielo."</em>
+				</section>
+			</section>
+
+			<!-- 09: Memoria del proceso -->
+
+			<!-- 10: Conclusiones -->
+		</div>
+	</div>
+	<!-- Scripts -->
+	<script type="text/javascript" src="js/reveal.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

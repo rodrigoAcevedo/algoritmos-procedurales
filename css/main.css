@@ -1,0 +1,153 @@
+@font-face {
+	font-family: "Glegoo";
+	src: url("../assets/fonts/Glegoo-Regular.ttf");
+}
+
+@font-face {
+	font-family: "Glegoo";
+	font-weight: bold;
+	src: url("../assets/fonts/Glegoo-Bold.ttf");
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("../assets/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+	font-family: "Roboto";
+	font-weight: bold;
+	src: url("../assets/fonts/Roboto-Bold.ttf");
+}
+
+img {
+	background: none !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+h1, h2 {
+	font-family: "Glegoo", sans-serif !important;
+}
+
+h3, h4, h5, h6 {
+	font-family: "Roboto", "Lato", sans-serif !important;
+	font-weight: bold !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #FAF7C5;
+}
+
+h1 {
+	font-size: 1em !important;
+	text-transform: none !important;
+}
+
+h2 {
+	font-size: 0.8em !important;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 0.6em !important;
+	font-weight: bold;
+}
+
+p {
+	font-size: 24px;
+}
+
+.to-right {
+	text-align: right;
+}
+
+.to-left {
+	text-align: left;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-column-gap: 15px;
+}
+
+.grid-layout-left {
+	display: grid;
+	grid-template-columns: 70% 30%;
+	grid-column-gap: 15px;
+}
+
+.grid-four {
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-column-gap: 15px;
+}
+
+.img-responsive {
+	width: 100%;
+}
+
+#al-intro h1 {
+	margin-bottom: 1em;
+}
+
+#al-intro ul {
+	width: 75%;
+}
+
+#al-intro li {
+	font-size: .65em;
+	margin-bottom: .75em;
+}
+
+#al-description, #al-history {
+	text-align: left !important;
+}
+
+#al-history section div {
+	font-size: 21px;
+}
+
+#al-history h2 {
+	font-size: 28px !important;
+	font-weight: bold;
+}
+
+#al-description p {
+	font-size: 21px;
+	color: #ddd;
+}
+
+#al-history {
+	color: #391C5D !important;
+}
+
+#al-history h1, #al-history h2, #al-history h3, #al-history h4, #al-history h5, #al-history h6 {
+	color: #27164C !important;
+}
+
+#al-psychology {
+	color: #391C5D !important;
+}
+
+#al-psychology h1, #al-psychology h2, #al-psychology h3, #al-psychology h4, #al-psychology h5, #al-psychology h6 {
+	color: #27164C !important;
+}
+
+#al-psychology p, #al-psychology li {
+	font-size: .65em !important;
+}
+
+#al-categories ul {
+	width: 80%;
+}
+
+#al-categories li {
+	margin-bottom: .5em;
+	font-size: .8em;
+}
+
+#al-categories p {
+	font-size: 21px;
+}
