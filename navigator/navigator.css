@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+}
+#world {
+  width: 500px;
+  height: 500px;
+}
+
+.box {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #aaaaaa;
+  font-size: 0.8em;
+}
+
+.black {
+  background-color: #262626 !important;
+}
+
+.grey {
+  background-color:#cccccc;
+}
+
+.blue {
+  background-color:lightblue !important;
+}
+
+.green {
+  background-color:lightgreen !important;
+}
+
+.w-north {
+  border-top: 1px solid #00cc00;
+}
+.w-south {
+  border-bottom: 1px solid #00cc00;
+}
+.w-east {
+  border-right: 1px solid #00cc00;
+}
+.w-west {
+  border-left: 1px solid #00cc00;
+}
