@@ -28,7 +28,7 @@ var group;
 				//camera.position.z = 1750;
 				camera.position.z = 1200;
 				camera.position.x = 850;
-				camera.rotation.y = -5 * Math.PI / 180
+				camera.rotation.y = 0 * Math.PI / 180
 				scene = new THREE.Scene();
 				group = new THREE.Group();
 				scene.add( group );

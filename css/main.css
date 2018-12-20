@@ -172,3 +172,21 @@ p {
 #al-categories p {
 	font-size: 21px;
 }
+
+#al-end p, #al-end ul {
+	color: #fff !important;
+	font-size: .65em;
+}
+
+#al-end ul li {
+	margin-bottom: 1em;
+}
+
+.al-bg-transparent {
+	background-color: rgba(0,0,0,0.7);
+}
+
+.al-bg-transparent blockquote {
+	color: #fff !important;
+	background: none !important;
+}

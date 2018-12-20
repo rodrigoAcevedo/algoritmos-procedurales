@@ -70,11 +70,23 @@
 			<!-- TODO: Agregar imágenes respectivas a cada item -->
 			<section id="al-procedural-content" data-background-color="#000000">
 				<h1>Contenido procedural</h1>
-				<div class="grid-four">
-					<div class="fragment fade-up">Escenarios</div>
-					<div class="fragment fade-up">Personajes</div>
-					<div class="fragment fade-up">Items</div>
-					<div class="fragment fade-up">Eventos</div>
+				<div class="grid-four" style="height:500px">
+					<div class="fragment fade-up">
+						<span>Escenarios</span>
+						<img src="assets/img/05-rogue.png">
+					</div>
+					<div class="fragment fade-up">
+						<span>Personajes</span>
+						<img src="assets/img/generated-enemy.png">
+					</div>
+					<div class="fragment fade-up">
+						<span>Items</span><br>
+						<img src="assets/img/generated-potion.gif">
+					</div>
+					<div class="fragment fade-up">
+						<span>Eventos</span>
+						<img src="assets/img/generated-event.jpg">
+					</div>
 				</div>
 			</section>
 
@@ -159,7 +171,7 @@
 			<section id="al-categories" data-background-iframe="render-categories.html">
 				<h1 style="margin-top:1.5em">Clasificación videojuegos procedurales</h1>
 				<section>
-					<ul>
+					<ul style="margin-left:8em">
 						<li class="fragment fade-up">Se identifican los distintos tipos de videojuegos procedurales.</li>
 						<li class="fragment fade-up">Se establece una clasificación acorde al nivel de profundidad que alcanza su contenido.</li>
 					</ul>
@@ -168,7 +180,7 @@
 					<img src="assets/img/06-ejes.svg" class="img-responsive">
 				</section>
 				<section>
-					<ul>
+					<ul style="margin-left:8em">
 						<li class="fragment fade-up">Nivel 1: Básicos</li>
 						<li class="fragment fade-up">Nivel 2: Intermedios</li>
 						<li class="fragment fade-up">Nivel 3: Avanzados</li>
@@ -210,7 +222,7 @@
 				<section>
 					<div style="height:500px;margin-top:3em">
 						<h2>Nivel 3</h2>
-						<ul>
+						<ul style="margin-left:8em">
 							<li class="fragment fade-up">El nivel de complejidad es superior.</li>
 							<li class="fragment fade-up">Los videojuegos mas característicos son los simuladores de entornos virtuales.</li>
 							<li class="fragment fade-up">Tales como el <strong>Sim City</strong>, <strong>GTA</strong>, <strong>Left 4 Dead</strong> y <strong>Dying Light</strong> entre otros.</li>
@@ -249,7 +261,7 @@
 				<section>
 					<div style="height:500px;margin-top:3em">
 						<h2>Nivel 4</h2>
-						<ul>
+						<ul style="margin-left:8em">
 							<li class="fragment fade-up">Videojuegos cuyo contenido es completamente procedural.</li>
 							<li class="fragment fade-up">Aprovechan la potencia de los procesadores actuales y de la computación en la nube.</li>
 							<li class="fragment fade-up"><span class="fragment highlight-blue">Expanden sus horizontes hacia mucho mas alla de lo que un jugador pueda recorrer en una vida.</span></li>
@@ -672,16 +684,41 @@
 					
 				</section>
 
-				<section style="color: #f8f6c4 !important; margin-top: 2em">
-					
+				<section style="color: #f8f6c4 !important; margin-top: 1em" data-state="graph2start">
+					<h2>Máximo estado de flujo</h2>
+					<div style="height: 450px;background-color:white">
+						<canvas id="graph2"></canvas>
+					</div>
+				</section>
+			</section>
+
+			<!-- 12: Conclusiones finales -->
+			<section id="al-end" data-background-iframe="render-cube.html">
+				<h1 style="font-weight: bold">Conclusiones finales</h1>
+				<section class="al-bg-transparent">
+					<ul>
+						<li class="fragment fade-in">Se explicó el lugar de los algoritmos procedurales en el diseño, desarrollo y la jugabilidad en los videojuegos.</li>
+						<li class="fragment fade-in">Se estableció una clasificación de videojuegos en relación a los niveles de profundidad que tiene su contenido procedural.</li>
+						<li class="fragment fade-in">Se desarrolló un videojuego procedural que sirvió de ejemplo a lo expuesto en el marco teórico de esta investigación.</li>
+					</ul>
 				</section>
 
-			<!--section>
-				<h1>Retrospectiva</h1>
-				<section data-state="graph1start" style="height:500px">
-					<canvas id="graph1"></canvas>
+				<section class="al-bg-transparent">
+					<blockquote>Todo tipo de contenido puede generarse proceduralmente, desde pequeños escenarios hasta narrativas complejas, e incluso universos con posibilidades casi infinitas.</blockquote>
 				</section>
-			</section-->
+
+				<section class="al-bg-transparent">
+					<blockquote>"Nada es permanente, excepto el cambio"</blockquote>
+					<p class="fragment fade-in to-right">- Heráclito</p>
+				</section>
+
+				<section>
+					<img src="assets/img/07-titlepic.png">
+				</section>
+			</section>
+			<!-- Gracias por venir -->
+			<section  data-background-iframe="render-main.html">
+				<img src="assets/img/main.svg">
 			</section>
 		</div>
 	</div>
