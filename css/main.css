@@ -127,6 +127,14 @@ p {
 	font-size: 21px;
 }
 
+#al-final blockquote {
+	color: #fff !important;
+}
+
+#al-final p, #al-final ul {
+	font-size: .65em;
+}
+
 #al-history {
 	color: #391C5D !important;
 }
