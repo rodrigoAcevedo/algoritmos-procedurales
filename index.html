@@ -480,12 +480,107 @@
 			</section>
 
 			<!-- 10: Memoria del proceso -->
-			<section>
+			<section id="al-memory" data-background-color="#FFFFFF">
+				<h1>Retrospectiva</h1>
+				<section>
+					<div class="grid" style="height:500px">
+						<div>
+							<img src="assets/img/10-unity.png" class="img-responsive">
+						</div>
+						<div>
+							<img src="assets/img/10-cs.png" class="img-responsive">
+						</div>
+					</div>
+				</section>
+				<section>
+					<h2>Inicios</h2>
+					<div class="grid" style="height: 500px">
+						<div class="fragment fade-right to-right">
+							<img src="assets/img/06-roguelike.jpg">
+						</div>
+						<div class="fragment fade-left to-left">
+							<p class="fragment fade-in">Base de un videojuego Roguelike básico.</p>
+							<p class="fragment fade-in">Extraído del sitio web de Unity.</p>
+							<p class="fragment fade-in">En dos dimensiones, sólo contempla la creación salones y pasillos.</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2>Fase Alpha</h2>
+					<div class="grid" style="height: 500px">
+						<div class="fragment fade-right to-right">
+							<img src="assets/img/Capitulo5_1.svg">
+						</div>
+						<div class="fragment fade-left to-left">
+							<p style="margin-top:4em">Arquitectura original del proyecto</p>
+							<p>Clase única para lógica e implementación</p>
+							<p>Clases separadas para la construcción de Salas y pasillos</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2>Fase Alpha: Convertir a 3D</h2>
+					<div class="grid" style="height:500px">
+						<div class="fragment fade-right to-right">
+							<img src="assets/img/prototype.png">
+						</div>
+						<div class="fragment fade-left to-left">
+							<p>Conversión del formato 2d a 3d.</p>
+							<p>Reconocimiento de límites de escenario</p>
+							<p>Algoritmo para generación de paredes y columnas</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2>Fase Alpha: Refactoreo</h2>
+					<div class="grid" style="height: 500px">
+						<div class="fragment fade-right to-right">
+							<img src="assets/img/Capitulo5_2.svg">
+						</div>
+						<div class="fragment fade-left to-left">
+							<p>Separación de la lógica del contenido.</p>
+							<p>Nueva clase <strong>Board</strong> que contiene la información binaria del escenario</p>
+							<p>La clase <strong>Board Creator</strong> se encarga de la vista del escenario.</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2>Fase Beta: Expansión de la arquitectura</h2>
+					<div class="grid" style="height: 500px">
+						<div class="fragment fade-right to-right">
+							<img src="assets/img/Capitulo6_3.svg">
+						</div>
+						<div class="fragment fade-left to-left">
+							<p style="margin-top:4em">De la clase <strong>Board Creator</strong> nacen tres nuevas clases derivadas.</p>
+							<ul>
+								<li>Hel Board Creator (Mundo vikingo)</li>
+								<li>Mayan Board Creator (Mundo Maya)</li>
+								<li>Inferno Board Creator (Infierno)</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section data-background-image="assets/img/eternity-01.png"></section>
+				<section data-background-image="assets/img/eternity-02.png"></section>
+				<section data-background-image="assets/img/eternity-04.png"></section>
+
+				<section>
+					<img src="assets/img/timeline.png">
+				</section>
+
+				
+			</section>
+			<!--section>
 				<h1>Retrospectiva</h1>
 				<section data-state="graph1start" style="height:500px">
 					<canvas id="graph1"></canvas>
 				</section>
-			</section>
+			</section-->
 
 			<!-- 11: Conclusiones -->
 			<section>

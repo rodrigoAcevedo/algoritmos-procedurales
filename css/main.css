@@ -20,6 +20,10 @@
 	src: url("../assets/fonts/Roboto-Bold.ttf");
 }
 
+ul {
+	list-style-type: square !important;
+}
+
 img {
 	background: none !important;
 	border: none !important;
@@ -119,6 +123,10 @@ p {
 	color: #ddd;
 }
 
+#al-memory p, #al-memory ul {
+	font-size: 21px;
+}
+
 #al-history {
 	color: #391C5D !important;
 }
@@ -129,6 +137,11 @@ p {
 
 #al-psychology {
 	color: #391C5D !important;
+}
+
+
+#al-memory, #al-memory h1, #al-memory h2 {
+	color: #666 !important;
 }
 
 #al-psychology h1, #al-psychology h2, #al-psychology h3, #al-psychology h4, #al-psychology h5, #al-psychology h6 {
